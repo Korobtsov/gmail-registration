@@ -19,9 +19,9 @@ public class ValidRegistration_Test extends BaseTestClass{
     public void validRegistration() throws InterruptedException{
         RegistrationFormPage regPage = new RegistrationFormPage(driver);
         System.out.println("findElement =" + driver.findElement(By.xpath("//*[@id='FirstName']")));
-        System.out.println("FINDBY =" + firstName1);
+        System.out.println("FINDBY =" + regPage.firstName);
         Assert.assertTrue("findElement", driver.findElement(By.xpath("//*[@id='FirstName']")).isDisplayed());
-        Assert.assertTrue("FINDBY", firstName1.isDisplayed());
+        Assert.assertTrue("FINDBY", regPage.firstName.isDisplayed());
 
     }
 }
