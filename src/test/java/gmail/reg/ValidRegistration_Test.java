@@ -12,9 +12,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class ValidRegistration_Test extends BaseTestClass{
 
-    @FindBy(xpath = "//*[@id='FirstName']")
-    public WebElement firstName1;
-
     @Test
     public void validRegistration() throws InterruptedException{
         RegistrationFormPage regPage = new RegistrationFormPage(driver);
