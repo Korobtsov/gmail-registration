@@ -14,7 +14,7 @@ public class RegistrationFormPage extends BasePage {
         super(driver);
     }
 
-    @FindBy(xpath = "//*[@class='wrapper']")
+    @FindBy(xpath = "//*[@class='signup-box']")
     public WebElement formSelector;
 
     @FindBy(xpath = "//*[@id='FirstName']")
@@ -56,6 +56,13 @@ public class RegistrationFormPage extends BasePage {
     @FindBy(xpath = "//*[@id='CountryCode']")
     public WebElement locationComboBox;
 
+    @FindBy(xpath = "//*[@id='TermsOfService']")
+    public WebElement privacyCheckBox;
+
+    @FindBy(xpath = "//*[@id='submitbutton']")
+    public WebElement submitButton;
+
+
     public void selectMonth(int index) {
         Select month = new Select(birthMonthComboBox);
         month.selectByIndex(index);
@@ -70,4 +77,5 @@ public class RegistrationFormPage extends BasePage {
         Select location = new Select(locationComboBox);
         location.selectByVisibleText(country);
     }
+
 }
